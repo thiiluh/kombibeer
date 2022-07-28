@@ -1,10 +1,10 @@
 package beers
 
 type Beer struct {
-	Id             int     `json:"id" gorm:"primaryKey;autoIncrement"`
-	Name           string  `json:"name"`
-	Ingredients    string  `json:"ingredients"`
-	AlcoholContent string  `json:"alcoholContent"`
-	Price          float64 `json:"price"`
-	Category       string  `json:"category"`
+	Id             int     `json:"id,omitempty" gorm:"primaryKey;autoIncrement"`
+	Name           string  `json:"name,omitempty"`
+	Ingredients    string  `json:"ingredients,omitempty"`
+	AlcoholContent string  `json:"alcoholContent,omitempty"`
+	Price          float64 `json:"price,omitempty"`
+	Category       string  `json:"category,omitempty"`
 }
