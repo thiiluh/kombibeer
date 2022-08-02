@@ -11,3 +11,24 @@ services:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=postgres
     - POSTGRES_DB=postgres
+  
+  healthcheck:
+    test: ["CMD", "pg_isready"]
+    interval: 10s
+    timeout: 1s
+    retries: 3
+    start_period: 2s
+
+ app:
+  image: kombi
+  environment:
+    - host=db
+    # - DB_PORT=5432
+    # - DB_USER=postgres
+    # - DB_PASSWORD=postgres
+    # - DB_NAME=postgres
+  ports:
+  - "8080:8080"
+  depends_on:
+    db:
+      condition: service_healthy
