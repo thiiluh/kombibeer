@@ -4,16 +4,12 @@ go 1.17
 
 require (
 	github.com/gin-gonic/gin v1.8.1
+	github.com/onsi/gomega v1.20.0
 	gorm.io/driver/postgres v1.3.8
 	gorm.io/gorm v1.23.8
 )
 
-require (
-	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/google/go-cmp v0.5.8 // indirect
-	github.com/onsi/gomega v1.20.0 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
-)
+require github.com/google/go-cmp v0.5.8 // indirect
 
 require (
 	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
@@ -27,7 +23,7 @@ require (
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/go-ozzo/ozzo-validation v3.6.0+incompatible // indirect
+	github.com/go-ozzo/ozzo-validation v3.6.0+incompatible
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.11.0 // indirect
@@ -64,8 +60,8 @@ require (
 	github.com/pelletier/go-toml/v2 v2.0.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
-	github.com/stretchr/testify v1.8.0
-	github.com/testcontainers/testcontainers-go v0.13.0 // indirect
+	github.com/stretchr/testify v1.8.0 // indirect
+	github.com/testcontainers/testcontainers-go v0.13.0
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	go.opencensus.io v0.22.3 // indirect
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa // indirect

@@ -23,7 +23,7 @@ var _ = BeforeSuite(func() {
 	ctx = context.Background()
 	config.Connect(tc.Host, tc.Port)
 	go InitRoutes()
-	time.Sleep(1 * time.Second)
+	time.Sleep(2 * time.Second)
 })
 
 var _ = AfterSuite(func() {
