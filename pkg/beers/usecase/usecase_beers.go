@@ -18,6 +18,9 @@ func (b *beerUseCase) FindAll() (beers []beers.Beer, err error) {
 }
 
 func (b *beerUseCase) Create(beer beers.Beer) (beers.Beer, error) {
+	if err := beer.Validate(); err != nil {
+		return beer, err
+	}
 	return b.repo.Create(beer)
 }
 

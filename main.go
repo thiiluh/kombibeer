@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/thiiluh/kombibeer/api/routes"
+	"github.com/thiiluh/kombibeer/api/handlers"
 	"github.com/thiiluh/kombibeer/internal/config"
 )
 
@@ -14,8 +14,8 @@ func main() {
 	if host == "" {
 		host = "localhost"
 	}
-	config.Connect(host)
-	if err := routes.InitRoutes(); err != nil {
+	config.Connect(host, 5432)
+	if err := handlers.InitRoutes(); err != nil {
 		log.Fatal(err)
 	}
 }

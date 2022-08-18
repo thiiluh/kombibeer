@@ -73,7 +73,8 @@ func create(c *gin.Context) {
 
 	if err != nil {
 		fmt.Errorf(err.Error())
-		c.Status(http.StatusBadRequest)
+
+		c.IndentedJSON(http.StatusBadRequest, err)
 		return
 	}
 
